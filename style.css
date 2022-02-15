@@ -7,6 +7,64 @@
     --color-white: #ffff;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+html {
+    font-size: 62.5%; /* 1rem = 10px */
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+body {
+    font-size: 1.6rem;
+    min-height: 100vh;
+    background-image: url('./images/pattern-background-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: var(--color-blue-pale);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    max-width: 45rem;
+    overflow: hidden;
+    text-align: center;
+    border-radius: 2rem;
+    background-color: white;
+}
+
+.card__content {
+    padding: 4.5rem 4.8rem 4.8rem 4.8rem;
+}
+
+.card__content h1 {
+    font-size: 2.8rem;
+    font-weight: 900;
+    margin-bottom: 1.7rem;
+}
+
+.card__content p {
+    font-weight: 500;
+    color: var(--color-blue-desat);
+    line-height: 2.6rem;
+    margin-bottom: 2rem;
+}
+
+.plan {
+    background-color: var(--color-blue-paler);
+    padding: 2.5rem 2.4rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 
 
 
