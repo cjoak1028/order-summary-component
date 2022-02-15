@@ -4,6 +4,8 @@
     --color-blue-bright: hsl(245, 75%, 52%);
     --color-blue-desat: hsl(224, 23%, 55%);
     --color-blue-dark: hsl(223, 47%, 23%);
+    --color-hover-violet: #766CF1;
+    --color-hover-dark: #1F2E55;
     --color-white: #ffff;
 }
 
@@ -14,7 +16,8 @@
 }
 
 html {
-    font-size: 62.5%; /* 1rem = 10px */
+    /* 1rem = 10px */
+    font-size: 62.5%;
     font-family: 'Red Hat Display', sans-serif;
 }
 
@@ -37,6 +40,11 @@ body {
     text-align: center;
     border-radius: 2rem;
     background-color: white;
+    margin: 0 2.4rem;
+}
+
+.card__banner img {
+    width: 100%;
 }
 
 .card__content {
@@ -53,19 +61,98 @@ body {
     font-weight: 500;
     color: var(--color-blue-desat);
     line-height: 2.6rem;
+}
+
+.card__content>p {
     margin-bottom: 2rem;
 }
 
 .plan {
     background-color: var(--color-blue-paler);
     padding: 2.5rem 2.4rem;
+    border-radius: 1.1rem;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
+.plan__overview {
+    display: flex;
+    align-items: center;
+}
+
+.plan__overview>div {
+    text-align: left;
+}
+
+.plan__overview>img {
+    margin-right: 2rem;
+}
+
+.plan__overview h4 {
+    font-weight: 900;
+}
+
+.btn-change {
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.btn-change:hover {
+    text-decoration: none;
+    color: var(--color-hover-violet);
+}
+
+.btn-proceed, .btn-cancel {
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 1.5rem;
+    margin-top: 3.2rem;
+}
+
+.btn-proceed {
+    display: block;
+    color: var(--color-white);
+    background-color: var(--color-blue-bright);
+    padding: 1.5rem 0;
+    border-radius: 1.1rem;
+    box-shadow: 0 2rem 2rem rgba(56, 42, 225, .19);
+}
+
+.btn-proceed:hover {
+    background-color: var(--color-hover-violet);
+}
+
+.btn-cancel {
+    display: inline-block;
+    color: var(--color-blue-desat);
+}
+
+.btn-cancel:hover {
+    color: var(--color-hover-dark);
+}
+
+@media only screen and (max-width: 446px) {
+    body {
+        font-size: 1.5rem;
+    }
+
+    .card__content {
+        padding: 3.2rem 2.4rem;
+    }
+
+    .card__content h1 {
+        font-size: 2.2rem;
+    }
+
+    .plan__overview>div {
+        font-size: 1.4rem;
+    }
+
+    .btn-change {
+        font-size: 1.3rem;
+    }
 
 
-
-
+}
